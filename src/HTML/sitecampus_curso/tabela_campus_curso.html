@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../estilo.css">
+        <title>Tabela</title>
+    </head>
+    <body>
+        <h1>Tabela de Cursos por Campus</h1>
+        <table id="tabela">
+            <thead>
+                <tr>
+                    <th>Nome campus</th>
+                    <th>Nome curso</th>
+                    <th>Site</th>  
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+        <script>
+            const lista = [{"nome_campus":"UTFPR-CM","nome_curso":"Engenharia Civil","site":"https://portal.utfpr.edu.br/cursos/graduacao/bacharelado/engenharia-civil"},{"nome_campus":"UFSC-Floripa","nome_curso":"Engenharia Civil","site":"null"},{"nome_campus":"UTFPR-CM","nome_curso":"Ciência da Computação","site":"null"},{"nome_campus":"UFSC-Floripa","nome_curso":"Ciência da Computação","site":"null"},{"nome_campus":"UFSC-Floripa","nome_curso":"Medicina","site":"null"},{"nome_campus":"UTFPR-CM","nome_curso":"Engenharia Química","site":"null"},{"nome_campus":"UFSC-Floripa","nome_curso":"Engenharia Química","site":"null"},{"nome_campus":"UTFPR-CM","nome_curso":"Engenharia Eletrônica","site":"null"},{"nome_campus":"UFSC-Floripa","nome_curso":"Engenharia Eletrônica","site":"null"},{"nome_campus":"UTFPR-CM","nome_curso":"Tecnologia em Alimentos","site":"null"},{"nome_campus":"UFSC-Floripa","nome_curso":"Tecnologia em Alimentos","site":"null"},];
+            const tabela = document.getElementById('tabela');
+            for (let i = 0; i < lista.length; i++) {
+                const linha = tabela.insertRow();
+
+                // Cria as células da linha
+                var link = document.createElement("a");
+                if((lista[i].site)=="null"){
+                    link.href = "https://ruf.folha.uol.com.br/2019/lista-universidades-instituicoes/";
+                } else{
+                    link.href = lista[i].site;
+                }
+                link.innerText = "Visitar Site";
+                const celulaId = linha.insertCell();
+                const celulaNome = linha.insertCell();
+                var celulaEstado = linha.insertCell();
+
+                // Define o conteúdo das células da linha
+                celulaId.textContent = lista[i].nome_campus;
+                celulaNome.textContent = lista[i].nome_curso;
+                celulaEstado.appendChild(link);
+            }
+        </script>
+    </body>
+</html>
+

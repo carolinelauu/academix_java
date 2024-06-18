@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../estilo.css">
+        <title>Tabela</title>
+    </head>
+    <body>
+        <h1>Tabela de Endereços</h1>
+        <table id="tabela">
+            <thead>
+                <tr>
+                    <th>CEP</th>
+                    <th>Logradouro</th>
+                    <th>Número</th>
+                    <th>Cidade</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+        <script>
+            const lista = [{"cep":"1246904","logradouro":"Av. Doutor Arnaldo","number":"715","cidade_id_cidade":"São Paulo"},{"cep":"13083970","logradouro":"Cidade Universitária Zeferino Vaz","number":"0","cidade_id_cidade":"Campinas"},{"cep":"31270901","logradouro":"Av. Pres. Antônio Carlos","number":"6627","cidade_id_cidade":"Belo Horizonte"},{"cep":"80060000","logradouro":"R. XV de Novembro","number":"1299","cidade_id_cidade":"Curitiba"},{"cep":"80230901","logradouro":"Av. Sete de Setembro","number":"3165","cidade_id_cidade":"Curitiba"},{"cep":"86036370","logradouro":"Av. João Miguel Caram","number":"3131","cidade_id_cidade":"Londrina"},{"cep":"86057970","logradouro":"Rodovia Celso Garcia Cid","number":"380","cidade_id_cidade":"Londrina"},{"cep":"87290000","logradouro":"Av. Liberdade","number":"2139","cidade_id_cidade":"Luiziana"},{"cep":"87300270","logradouro":"Rua das Gaivotas","number":"206","cidade_id_cidade":"Campo Mourão"},{"cep":"87301899","logradouro":"Via Rosalina Maria dos Santos","number":"1233","cidade_id_cidade":"Campo Mourão"},{"cep":"88040900","logradouro":" R. Eng. Agronômico Andrei Cristian Ferreira","number":"0","cidade_id_cidade":"Florianópolis"},];
+            const tabela = document.getElementById('tabela');
+            for (let i = 0; i < lista.length; i++) {
+            const linha = tabela.insertRow();
+
+            // Cria as células da linha
+            const celulaCEP = linha.insertCell();
+            const celulaLogradouro = linha.insertCell();
+            const celulaNumber = linha.insertCell();
+            const celulaCidade = linha.insertCell();
+
+            // Define o conteúdo das células da linha
+            celulaCEP.textContent = lista[i].cep;
+            celulaLogradouro.textContent = lista[i].logradouro;
+            celulaNumber.textContent = lista[i].number;
+            celulaCidade.textContent = lista[i].cidade_id_cidade;
+        }
+        </script>
+    </body>
+</html>

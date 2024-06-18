@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../estilo.css">
+        <title>Tabela</title>
+    </head>
+    <body>
+        <h1>Tabela de Cidades</h1>
+        <table id="tabela">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nome</th>
+                    <th>Estado</th>  
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+        <script>
+            const lista = [{"id_cidade":"1","nome_cidade":"Campo Mourão","estado_sigla_estado":"PR"},{"id_cidade":"2","nome_cidade":"Curitiba","estado_sigla_estado":"PR"},{"id_cidade":"3","nome_cidade":"Londrina","estado_sigla_estado":"PR"},{"id_cidade":"4","nome_cidade":"Dois Vizinhos","estado_sigla_estado":"PR"},{"id_cidade":"5","nome_cidade":"Toledo","estado_sigla_estado":"PR"},{"id_cidade":"6","nome_cidade":"Francisco Beltrão","estado_sigla_estado":"PR"},{"id_cidade":"7","nome_cidade":"São Paulo","estado_sigla_estado":"SP"},{"id_cidade":"8","nome_cidade":"Campinas","estado_sigla_estado":"SP"},{"id_cidade":"9","nome_cidade":"Belo Horizonte","estado_sigla_estado":"MG"},{"id_cidade":"10","nome_cidade":"Florianópolis","estado_sigla_estado":"SC"},{"id_cidade":"11","nome_cidade":"Sinop","estado_sigla_estado":"MT"},];
+            const tabela = document.getElementById('tabela');
+            for (let i = 0; i < lista.length; i++) {
+            const linha = tabela.insertRow();
+
+            // Cria as células da linha
+            const celulaId = linha.insertCell();
+            const celulaNome = linha.insertCell();
+            const celulaEstado = linha.insertCell();
+
+            // Define o conteúdo das células da linha
+            celulaId.textContent = lista[i].id_cidade;
+            celulaNome.textContent = lista[i].nome_cidade;
+            celulaEstado.textContent = lista[i].estado_sigla_estado;
+        }
+        </script>
+    </body>
+</html>
+

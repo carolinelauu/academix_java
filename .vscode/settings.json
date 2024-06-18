@@ -1,0 +1,15 @@
+{
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "src/jars/angus-activation-2.0.0.jar",
+        "src/jars/eclipselink-4.0.1.jar",
+        "src/jars/iText-5.0.5.jar",
+        "src/jars/itextpdf-5.5.9.jar",
+        "src/jars/jakarta-httpcore-4.0-alpha4.jar",
+        "src/jars/javax.persistence-api-2.2.jar",
+        "src/jars/jcalendar-1.4.jar",
+        "src/jars/jcommon-1.0.23.jar",
+        "src/jars/jfreechart-1.0.19-demo.jar",
+        "src/jars/mysql-connector-j-8.0.32.jar"
+    ]
+}

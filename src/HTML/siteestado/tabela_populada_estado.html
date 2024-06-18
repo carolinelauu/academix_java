@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../estilo.css">
+        <title>Tabela</title>
+    </head>
+    <body>
+        <h1>Tabela de Estados</h1>
+        <table id="tabela">
+            <thead>
+                <tr>
+                    <th>Sigla</th>
+                    <th>Estado</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+        <script>
+            const lista = [{"sigla_estado":"AC","nome_estado":"Acre"},{"sigla_estado":"AL","nome_estado":"Alagoas"},{"sigla_estado":"AM","nome_estado":"Amazonas"},{"sigla_estado":"AP","nome_estado":"Amapá"},{"sigla_estado":"BA","nome_estado":"Bahia"},{"sigla_estado":"CE","nome_estado":"Ceará"},{"sigla_estado":"DF","nome_estado":"Distrito Federal"},{"sigla_estado":"ES","nome_estado":"Espírito Santo"},{"sigla_estado":"GO","nome_estado":"Goiás"},{"sigla_estado":"MA","nome_estado":"Maranhão"},{"sigla_estado":"MG","nome_estado":"Minas Gerais"},{"sigla_estado":"MS","nome_estado":"Mato Grosso do Sul"},{"sigla_estado":"MT","nome_estado":"Mato Grosso"},{"sigla_estado":"NO","nome_estado":"NAO DA ERRO POR FAVOR"},{"sigla_estado":"PA","nome_estado":"Pará"},{"sigla_estado":"PB","nome_estado":"Paraíba"},{"sigla_estado":"PE","nome_estado":"Pernambuco"},{"sigla_estado":"PI","nome_estado":"Piauí"},{"sigla_estado":"PR","nome_estado":"Paraná"},{"sigla_estado":"RJ","nome_estado":"Rio de Janeiro"},{"sigla_estado":"RN","nome_estado":"Rio Grande do Norte"},{"sigla_estado":"RO","nome_estado":"Rondônia"},{"sigla_estado":"RR","nome_estado":"Rorraima"},{"sigla_estado":"RS","nome_estado":"Rio Grande do Sul"},{"sigla_estado":"SC","nome_estado":"Santa Catarina"},{"sigla_estado":"SE","nome_estado":"Sergipe"},{"sigla_estado":"SP","nome_estado":"São Paulo"},{"sigla_estado":"TO","nome_estado":"Tocantins"}];
+            const tabela = document.getElementById('tabela');
+            for (let i = 0; i < lista.length; i++) {
+            const linha = tabela.insertRow();
+
+            // Cria as células da linha
+            const celulaSigla = linha.insertCell();
+            const celulaNome = linha.insertCell();
+
+            // Define o conteúdo das células da linha
+            celulaSigla.textContent = lista[i].sigla_estado;
+            celulaNome.textContent = lista[i].nome_estado;
+        }
+        </script>
+    </body>
+</html>
+

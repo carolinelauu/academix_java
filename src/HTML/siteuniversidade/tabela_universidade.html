@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../estilo.css">
+        <title>Tabela</title>
+    </head>
+    <body>
+        <h1>Tabela de Universidades</h1>
+        <table id="tabela">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nome</th>
+                    <th>Privada</th>
+                    <th>Sigla</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+        <script>
+            const lista = jsonPessoas;
+            const tabela = document.getElementById('tabela');
+            for (let i = 0; i < lista.length; i++) {
+            const linha = tabela.insertRow();
+
+            // Cria as células da linha
+            const celulaId = linha.insertCell();
+            const celulaNome = linha.insertCell();
+            const celulaPrivada = linha.insertCell();
+            const celulaSigla = linha.insertCell();
+
+            // Define o conteúdo das células da linha
+            celulaId.textContent = lista[i].id_universidade;
+            celulaNome.textContent = lista[i].nome_universidade;
+            celulaPrivada.textContent = lista[i].privada;
+            celulaSigla.textContent = lista[i].sigla_universidade;
+        }
+        </script>
+    </body>
+</html>
+

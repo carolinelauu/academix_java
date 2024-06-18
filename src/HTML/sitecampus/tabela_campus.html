@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../estilo.css">
+        <title>Tabela</title>
+    </head>
+    <body>
+        <h1>Tabela de Campus</h1>
+        <table id="tabela">
+            <thead>
+                <tr>
+                    <th>CEP</th>
+                    <th>Nome</th>
+                    <th>Telefone</th>
+                    <th>Universidade</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+        <script>
+            const lista = jsonPessoas;
+            const tabela = document.getElementById('tabela');
+            for (let i = 0; i < lista.length; i++) {
+            const linha = tabela.insertRow();
+
+            // Cria as células da linha
+            const celulaCEP = linha.insertCell();
+            const celulaNome = linha.insertCell();
+            const celulaTelefone = linha.insertCell();
+            const celulaUniversidade = linha.insertCell();
+
+            // Define o conteúdo das células da linha
+            celulaCEP.textContent = lista[i].address_cep;
+            celulaNome.textContent = lista[i].nome_campus;
+            celulaTelefone.textContent = lista[i].telefone;
+            celulaUniversidade.textContent = lista[i].universidade_id_universidade;
+        }
+        </script>
+    </body>
+</html>
